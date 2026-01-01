@@ -5,7 +5,7 @@ app=Flask(__name__)
 app.secret_key="123"
 
 db=mysql.connector.connect(
- host="localhost",user="root",password="Sanket#8691",database="cric_book"
+ host="localhost",user="root",password="YOUR_MYSQL_PASSWORD",database="cric_book"
 )
 cur=db.cursor()
 
