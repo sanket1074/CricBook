@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="box">
+<h2>Admin Panel</h2>
+<a href="/logout"><button>Logout</button></a>
+<a href="/report"><button>View Report</button></a>
+
+<form action="/addmatch" method="post">
+<input name="name" placeholder="Match Name">
+<input name="total" placeholder="Total Seats">
+<input name="price" placeholder="Seat Price">
+<button>Add Match</button>
+</form>
+
+<table border="1">
+<tr><th>Match</th><th>Available</th><th>Price</th><th>Delete</th></tr>
+{% for i in data %}
+<tr>
+<td>{{i[1]}}</td>
+<td>{{i[3]}}</td>
+<td>₹{{i[4]}}</td>
+<td><a href="/delete/{{i[0]}}">❌</a></td>
+</tr>
+{% endfor %}
+</table>
+</div>

@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="box">
+<h2>Available Matches</h2>
+<a href="/logout"><button>Logout</button></a>
+<a href="/mybookings"><button>My Bookings</button></a>
+
+{% if request.args.get('msg') %}
+<p style="color:green">{{request.args.get('msg')}}</p>
+{% endif %}
+
+<table border="1">
+{% for i in data %}
+<tr>
+<td>{{i[1]}}</td>
+<td>{{i[3]}}</td>
+<td>₹{{i[4]}}</td>
+<td>
+<form action="/payment/{{i[0]}}" method="post">
+<input name="seats" placeholder="Seats" required>
+<button>Book</button>
+</form>
+</td>
+</tr>
+{% endfor %}
+</table>
+</div>

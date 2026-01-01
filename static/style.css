@@ -1,0 +1,13 @@
+body{background:#f2f2f2;font-family:arial}
+.box{
+ width:380px;
+ margin:auto;
+ margin-top:100px;
+ background:white;
+ padding:20px;
+ text-align:center;
+ border-radius:10px;
+}
+input,select,button{width:90%;padding:10px;margin:10px}
+button{background:#007bff;color:white;border:none;border-radius:5px}
+table{margin:auto}

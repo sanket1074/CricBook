@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="box">
+<h2>Payment Gateway</h2>
+<p>Match: {{match}}</p>
+<p>Seats: {{seats}}</p>
+<p>Total: ₹{{amount}}</p>
+<form action="/pay/{{mid}}/{{seats}}" method="post">
+<select name="mode">
+<option>UPI</option>
+<option>Debit Card</option>
+<option>Credit Card</option>
+<option>Net Banking</option>
+</select>
+<button>Pay Now</button>
+</form>
+</div>

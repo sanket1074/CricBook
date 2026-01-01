@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="box">
+<h2>Booking Report</h2>
+<a href="/admin"><button>Back</button></a>
+<table border="1">
+<tr><th>User</th><th>Match</th><th>Seats</th></tr>
+{% for i in data %}
+<tr><td>{{i[0]}}</td><td>{{i[1]}}</td><td>{{i[2]}}</td></tr>
+{% endfor %}
+</table>
+</div>
